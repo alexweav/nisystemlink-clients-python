@@ -71,7 +71,6 @@ class TestITagReader:
             assert data_type == result.data_type
 
     @pytest.mark.slow
-    @pytest.mark.skip(reason="temporary, remove b4 submit")
     def test__get_tag_reader__mypy_ensures_correct_type(self):
         code_template = textwrap.dedent(
             """
