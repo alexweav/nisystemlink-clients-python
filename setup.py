@@ -1,4 +1,4 @@
-from setuptools import find_packages, setup  # type: ignore
+from setuptools import find_namespace_packages, setup  # type: ignore
 from setuptools.command.test import test as TestCommand  # type: ignore
 
 
@@ -46,7 +46,7 @@ setup(
     maintainer_email="paul.spangler@ni.com, alex.weaver@ni.com",
     keywords=["nisystemlink", "systemlink"],
     license="MIT",
-    packages=find_packages(exclude=["examples", "tests"]),
+    packages=find_namespace_packages(exclude=["examples", "tests"]),
     install_requires=[
         'aenum;python_version<"3.6"',
         "events",
